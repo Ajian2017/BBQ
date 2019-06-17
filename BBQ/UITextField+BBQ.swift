@@ -8,10 +8,8 @@
 
 import UIKit
 
-typealias TextChangeBlock = (UITextField) -> Void
-
-class DisposebleTextField {
-
+public typealias TextChangeBlock = (UITextField) -> Void
+public class DisposebleTextField {
     static var disposeBag = [DisposebleTextField]()
     let textChangeBlock: TextChangeBlock?
     weak var owner: NSObject?
@@ -20,7 +18,7 @@ class DisposebleTextField {
         self.textChangeBlock = block
     }
 
-    func addOwener(_ obj: NSObject) {
+    public func addOwener(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleTextField.disposeBag.append(self)
@@ -34,7 +32,7 @@ class DisposebleTextField {
         return DisposebleTextField(block)
     }
 
-    func dispose() {
+    public func dispose() {
         var newDispose = [DisposebleTextField]()
         for dis in DisposebleTextField.disposeBag where dis.owner != nil {
             newDispose.append(dis)
@@ -45,13 +43,13 @@ class DisposebleTextField {
 
 extension UITextField {
 
-    func onTextChange(_ event: UIControl.Event, _ block: @escaping TextChangeBlock) -> DisposebleTextField {
+    public func onTextChange(_ event: UIControl.Event, _ block: @escaping TextChangeBlock) -> DisposebleTextField {
         let dispose = DisposebleTextField.create(block)
         self.addTarget(dispose, action: #selector(DisposebleTextField.onTextChange(_:)), for: event)
         return dispose
     }
 
-    func onTextChange(_ block: @escaping TextChangeBlock) -> DisposebleTextField {
+    public func onTextChange(_ block: @escaping TextChangeBlock) -> DisposebleTextField {
         return onTextChange(.editingChanged, block)
     }
 }

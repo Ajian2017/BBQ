@@ -8,28 +8,27 @@
 
 import UIKit
 
-typealias TapBlock = (UIButton) -> Void
-
-class DisposebleBtn {
+public typealias TapBlock = (UIButton) -> Void
+public class DisposebleBtn {
     static var disposeBag = [DisposebleBtn]()
     let tabBlock: TapBlock?
     weak var owner: NSObject?
     init(_ block: @escaping TapBlock) {
         self.tabBlock = block
     }
-
-    func addOwener(_ obj: NSObject) {
+    
+    public func addOwener(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleBtn.disposeBag.append(self)
     }
 
-    @objc func onTapAction(_ bt: UIButton) {
-        self.tabBlock?(bt)
-    }
-
     static func create(_ block: @escaping TapBlock) -> DisposebleBtn {
         return DisposebleBtn(block)
+    }
+
+    @objc func onTapAction(_ bt: UIButton) {
+        self.tabBlock?(bt)
     }
 
     func dispose() {
@@ -43,13 +42,13 @@ class DisposebleBtn {
 
 extension UIButton {
 
-    func onTap(_ event: UIControl.Event, _ block: @escaping TapBlock) -> DisposebleBtn {
+    public func onTap(_ event: UIControl.Event, _ block: @escaping TapBlock) -> DisposebleBtn {
         let dispose = DisposebleBtn.create(block)
         self.addTarget(dispose, action: #selector(DisposebleBtn.onTapAction(_:)), for: event)
         return dispose
     }
 
-    func onTap(_ block: @escaping TapBlock) -> DisposebleBtn {
+    public func onTap(_ block: @escaping TapBlock) -> DisposebleBtn {
         return onTap(.touchUpInside, block)
     }
 }
