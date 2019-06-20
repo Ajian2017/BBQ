@@ -1,30 +1,73 @@
 # BBQ
-this bbq library is created to simplify the iOS layout use language swift
 
-# Basic Usage
+## 背景
 
-## Step1: Prepare view to layout, the following code will create 'subview' to layout
-<p>
-let parentview = UIView()<br>
-let subview = UIView()<br>
-parentview.addSubview(subview)<br>
- </p>	
+---
 
-## layout1: the following code will positing the 'subview' to the center of it's superview, and with width 200 and height 100 
-subview.bbq()!.centerX().centerY().size(200, 100)
+对于iOS繁杂的界面布局语法，以及常用控件松散的代理方法编写, 业界已有SnpKit以及RxSwift框架解决方案，本人还是抽空写了此SDK,主要是因为个人觉SnpKit和RxSwift的框架太过重量级，编译耗时，随便写个小demo就导入一大坨代码。
 
-## layout2: the following code will positing the 'subview' 50 to the left of superview, 60 to the top of superview,  meanwhile with width 150 and height 200 
-subview.bbq()!.left(50).top(60).size(150, 200)
+### 功能
 
-## layout3: the following code will create another view say 'subview2', and the 'subview2' 200 to the bottom of 'subview', 50 to the left of 'superview', meanwhile it's width is 1.5 times 'subview' minus 50 and height same with 'subview'
+---
 
-<p>
-let subview2 = UIView()<br>
-parentview.addSubview(subview)<br>       
-subview2.bbq()!.top(200, subview, true).left(50).widthEqualTo(subview, 1.5, -50).heightEqualTo(subview)<br>
- </p>	
+BBQ初衷就是让写代码舒服一些，目前主要有两个功能：
 
+1. 简化iOS繁杂的界面布局语法 
+2. 将常用控件响应方法由代理改为block回调
 
-# summary
- more usage please see the source code, cause the code is really less and easy to understand
-  
+### 使用示例
+
+---
+
+一、布局示例
+
+    初始化一个待布局的子视图，将其添加到父视图，假设子视图为subview,父视图为 parentview:
+    let parentview = UIView()
+    let subview = UIView()
+    parentview.addSubview(subview)  
+
+    将subview设置到父视图中央，宽100，高50： 
+    subview.bbq!.centerX().centerY().size(100,50)
+
+    将subview设为距离父视图左边50，上边60,宽150,高100: 
+    subview.bbq()!.left(50).top(60).size(150, 200)
+
+更多布局示例请参考文件‘UIView+layout.swift’,代码很简单，一看就懂用😄
+
+二、控件响应示例
+
+    UIButton点击响应写法：
+    let btn = UIButton();
+    btn.onTap { (btn) in  // do stuff}.addOwner(self)
+
+    UITextFiled文字变动监听: 
+    let textfield = UITextField(); 
+    textfield.onTextChange { (tf) in // do stuff}.addOwner(self)
+
+    UITextView文字变动监听: 
+    let textview = UITextView(); 
+    textview.onTextViewChange { (tv) in // do stuff}.addOwner(self)
+
+    UISwitch开关监听：
+    let switch = UISwitch();
+    switch.onToggle { (switch) in //do stuff}.addOwner(self)
+
+上面的addOwner(self)里面self是啥呢，一般就是viewcontroller 对象， 因为该对象持有上述UI控件，为了简化调用者内存管理而存在
+
+更多控件响应示例请参考源码, 代码很简单，一看就懂用😄
+
+### 安装
+
+---
+
+需要先安装cocoaPods
+
+在Podfile加入下面一行：pod 'BBQ'
+
+终端运行 pod install
+
+### 总结
+
+---
+
+本SDK并没有RxSwift异步链式函数响应式功能，主要致力于简化原生iOS繁杂的界面布局语法，以及常用控件松散的代理方法编写。有啥好的建议欢迎@me。
