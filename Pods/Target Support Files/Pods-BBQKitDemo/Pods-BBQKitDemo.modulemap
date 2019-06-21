@@ -1,0 +1,6 @@
+framework module Pods_BBQKitDemo {
+  umbrella header "Pods-BBQKitDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
