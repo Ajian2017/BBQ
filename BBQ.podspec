@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "BBQ"
-  s.version      = "0.2.0"
-  s.summary      = "simplify the layout of iOS"
+  s.version      = "0.2.9"
+  s.summary      = "simplify the develop of iOS"
   s.description  = <<-DESC
                     Swift
                     iOS
