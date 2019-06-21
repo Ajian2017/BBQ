@@ -12,7 +12,7 @@ public class BBQSectionTableViewProxy: NSObject, UITableViewDataSource, UITableV
 
     private var dataSources: [BBQTableViewProxy<Any>]
 
-    init(dataSources: [BBQTableViewProxy<Any>]) {
+    public init(dataSources: [BBQTableViewProxy<Any>]) {
         self.dataSources = dataSources
     }
 

@@ -10,7 +10,7 @@ import UIKit
 
 public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableViewDelegate {
 
-    typealias CellConfigClosure = (Model, UITableViewCell) -> Void
+    public typealias CellConfigClosure = (Model, UITableViewCell) -> Void
     public typealias HeaderFooterConfigClosure = () -> UIView
     public typealias HeaderFooterHeightConfigClosure = () -> CGFloat
     public typealias CellHeightConfigClosure = (Int) -> CGFloat
@@ -69,7 +69,7 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
     ///   - models: models to config tableview cells
     ///   - reuseIdentifier: reuseIdentifier to deuque a tableviewcell
     ///   - cellConfigBlock: block to config a cell with associated model
-    init(models: [Model], reuseIdentifier: String, cellConfigBlock: @escaping CellConfigClosure) {
+    public init(models: [Model], reuseIdentifier: String, cellConfigBlock: @escaping CellConfigClosure) {
         self.models = models
         self.reuseIdentifier = reuseIdentifier
         self.cellConfigBlock = cellConfigBlock
