@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BBQ"
-  s.version      = "0.2.9"
+  s.version      = "0.3.0"
   s.summary      = "simplify the develop of iOS"
   s.description  = <<-DESC
                     Swift
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Ajian2017/BBQ.git", :tag => "#{s.version}" }
   s.swift_version = "4.2"
-  s.source_files  = "BBQ/*.swift"
+  s.source_files  = "BBQ/**/*.swift"
   s.framework  = "UIKit"
   s.requires_arc = true
 end
