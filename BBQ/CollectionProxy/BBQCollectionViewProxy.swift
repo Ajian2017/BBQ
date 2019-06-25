@@ -8,11 +8,10 @@
 
 import UIKit
 
-public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     public typealias CollectionCellConfigClosure = (Model, UICollectionViewCell) -> Void
     public typealias CollectionCellClickClosure = (Model) -> Void
-    public typealias HeaderFooterViewConfigClosure = (UICollectionView, IndexPath) -> UICollectionReusableView
 
     public typealias CellSizeConfigClosure = (Int) -> CGSize
     public typealias HeaderFooterSizeConfigClosure = () -> CGSize
@@ -21,12 +20,26 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
 
     var models: [Model] = []
 
+    private weak var collectionView: UICollectionView?
+
     private var reuseIdentifier: String = ""
     private let cellConfigBlock: CollectionCellConfigClosure
     private var cellClickClosure: CollectionCellClickClosure?
 
     private var headerConfigClosure: HeaderFooterViewConfigClosure?
     private var footerConfigClosure: HeaderFooterViewConfigClosure?
+    
+    private var defaultFooterConfigClosure: HeaderFooterViewConfigClosure = {
+        (indexPath, collectionView) in
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! CollectionHeaderFooterView
+        return footer
+    }
+
+    private var defaultHeaderConfigClosure: HeaderFooterViewConfigClosure = {
+        (indexPath, collectionView) in
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! CollectionHeaderFooterView
+        return header
+    }
 
     private var cellSizeConfigClosure: CellSizeConfigClosure?
     private var headerSizeConfigClosure: HeaderFooterSizeConfigClosure?
@@ -37,7 +50,6 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
 
     private var insetsConfigClosure: InsetsConfigClosure?
 
-
     //MARK: - init
 
     /// congfig basic collectionview with specific models and cell config closure
@@ -46,10 +58,14 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
     ///   - models: models to config tableview cells
     ///   - reuseIdentifier: reuseIdentifier to deuque a tableviewcell
     ///   - cellConfigBlock: block to config a cell with associated model
-    public init(models: [Model], reuseIdentifier: String, cellConfigBlock: @escaping CollectionCellConfigClosure) {
+    public init(models: [Model], collectionView: UICollectionView, reuseIdentifier: String, cellConfigBlock: @escaping CollectionCellConfigClosure) {
+        self.collectionView = collectionView
         self.models = models
         self.reuseIdentifier = reuseIdentifier
         self.cellConfigBlock = cellConfigBlock
+
+        collectionView.register(CollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID)
+        collectionView.register(CollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID)
     }
 
     //MARK: - configs
@@ -61,17 +77,21 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
         self.cellClickClosure = closure
     }
 
-    /// config collection header closure
+    /// config collection header
     ///
-    /// - Parameter closure: closure to config collection header
-    public func setHeaderConfigClosure(_ closure: @escaping HeaderFooterViewConfigClosure) {
+    /// - Parameters:
+    ///   - resuseId: the reusedIdentifier for dequeue header view
+    ///   - closure: closure for config header view
+    public func setHeaderConfig(_ closure: @escaping HeaderFooterViewConfigClosure) {
         self.headerConfigClosure = closure
     }
 
-    /// config collection footer closure
+    /// config collection footer
     ///
-    /// - Parameter closure: closure to config collection header
-    public func setFooterConfigClosure(_ closure: @escaping HeaderFooterViewConfigClosure) {
+    /// - Parameters:
+    ///   - resuseId: the reusedIdentifier for dequeue footer view
+    ///   - closure: closure for config footer view
+    public func setFooterConfig(_ closure: @escaping HeaderFooterViewConfigClosure) {
         self.footerConfigClosure = closure
     }
 
@@ -119,6 +139,8 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
 
     //MARK: - datasource & delegate
 
+    public func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
+
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count
     }
@@ -131,13 +153,12 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
     }
 
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            return self.headerConfigClosure?(collectionView, indexPath) ?? UICollectionReusableView(frame: .zero)
-        case UICollectionView.elementKindSectionFooter:
-            return self.footerConfigClosure?(collectionView, indexPath) ?? UICollectionReusableView(frame: .zero)
-        default:
-            return UICollectionReusableView(frame: .zero)
+        if kind == UICollectionView.elementKindSectionHeader {
+            let closure = self.headerConfigClosure ?? self.defaultHeaderConfigClosure
+            return closure(indexPath, collectionView)
+        } else {
+            let closure = self.footerConfigClosure ?? self.defaultFooterConfigClosure
+            return closure(indexPath, collectionView)
         }
     }
 
@@ -194,7 +215,6 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
         return layout.footerReferenceSize
     }
 }
-
 
 public extension UICollectionViewFlowLayout {
     
