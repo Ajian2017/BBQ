@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BBQ"
-  s.version      = "0.3.8"
+  s.version      = "0.3.9"
   s.summary      = "simplify the develop of iOS"
   s.description  = <<-DESC
                     Swift
