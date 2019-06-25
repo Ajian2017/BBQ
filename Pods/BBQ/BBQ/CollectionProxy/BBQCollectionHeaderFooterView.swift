@@ -1,5 +1,5 @@
 //
-//  CollectionHeaderFooterView.swift
+//  BBQCollectionHeaderFooterView.swift
 //  BBQKitDemo
 //
 //  Created by qzjian on 2019/6/25.
@@ -11,7 +11,7 @@ import UIKit
 public let DefaultHeaderID = "BBQHeader"
 public let DefaultFooterID = "BBQFooter"
 
-public class CollectionHeaderFooterView: UICollectionReusableView {
+public class BBQCollectionHeaderFooterView: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

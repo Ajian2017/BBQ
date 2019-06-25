@@ -33,13 +33,13 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
     
     public var defaultFooterConfigClosure: HeaderFooterViewConfigClosure = {
         (indexPath, collectionView) in
-        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! CollectionHeaderFooterView
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! BBQCollectionHeaderFooterView
         return footer
     }
 
     public var defaultHeaderConfigClosure: HeaderFooterViewConfigClosure = {
         (indexPath, collectionView) in
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! CollectionHeaderFooterView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! BBQCollectionHeaderFooterView
         return header
     }
 
@@ -66,8 +66,8 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
         self.reuseIdentifier = reuseIdentifier
         self.cellConfigBlock = cellConfigBlock
 
-        collectionView.register(CollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID)
-        collectionView.register(CollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID)
+        collectionView.register(BBQCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID)
+        collectionView.register(BBQCollectionHeaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID)
     }
 
     //MARK: - configs

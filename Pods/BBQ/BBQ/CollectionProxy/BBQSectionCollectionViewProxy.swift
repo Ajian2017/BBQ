@@ -18,13 +18,13 @@ public class BBQSectionCollectionViewProxy: NSObject, UICollectionViewDataSource
 
     public var defaultFooterConfigClosure: ReusableViewConfigClosure = {
         (indexPath, collectionView) in
-        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! CollectionHeaderFooterView
+        let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! BBQCollectionHeaderFooterView
         return footer
     }
 
     public var defaultHeaderConfigClosure: ReusableViewConfigClosure = {
         (indexPath, collectionView) in
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! CollectionHeaderFooterView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! BBQCollectionHeaderFooterView
         return header
     }
 
