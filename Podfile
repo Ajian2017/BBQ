@@ -6,6 +6,6 @@ target 'BBQKitDemo' do
   use_frameworks!
 
   # Pods for BBQKitDemo
-  pod 'BBQ', '~> 0.3.2'
+  pod 'BBQ', '~> 0.3.3'
 
 end

@@ -81,30 +81,30 @@
 		098D467B22BD0A4F0033F335 /* BBQKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				09F91B4022C0AE0B0097421D /* images */,
-				09F91B3B22C0ADB30097421D /* views */,
+				09FF34B322C1AB5500DBD478 /* ViewControllers */,
+				09F91B4022C0AE0B0097421D /* Images */,
+				09F91B3B22C0ADB30097421D /* Views */,
 				098D467C22BD0A4F0033F335 /* AppDelegate.swift */,
-				098D467E22BD0A4F0033F335 /* ViewController.swift */,
 				098D468022BD0A4F0033F335 /* Main.storyboard */,
 				098D468322BD0A530033F335 /* Assets.xcassets */,
 				098D468522BD0A530033F335 /* LaunchScreen.storyboard */,
 				098D468822BD0A530033F335 /* Info.plist */,
-				09F91B3922C0AC230097421D /* CollectionViewController.swift */,
 			);
 			path = BBQKitDemo;
 			sourceTree = "<group>";
 		};
-		09F91B3B22C0ADB30097421D /* views */ = {
+		09F91B3B22C0ADB30097421D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				09F91B3C22C0ADE70097421D /* CollectionViewCell.swift */,
 				09F91B3D22C0ADE70097421D /* CollectionViewCell.xib */,
 				09F91B4922C0B77F0097421D /* CollectionViewHeader.swift */,
 			);
-			path = views;
+			name = Views;
+			path = Views.temp_caseinsensitive_rename.;
 			sourceTree = "<group>";
 		};
-		09F91B4022C0AE0B0097421D /* images */ = {
+		09F91B4022C0AE0B0097421D /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				09F91B4B22C0B7E40097421D /* space.jpg */,
@@ -114,7 +114,18 @@
 				09524E0222C0C1E900D9F0BB /* footer.jpg */,
 				09F91B4722C0AE490097421D /* 14.jpg */,
 			);
-			path = images;
+			name = Images;
+			path = Images.temp_caseinsensitive_rename.;
+			sourceTree = "<group>";
+		};
+		09FF34B322C1AB5500DBD478 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09F91B3922C0AC230097421D /* CollectionViewController.swift */,
+				098D467E22BD0A4F0033F335 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			path = Viewcontrollers.temp_caseinsensitive_rename.;
 			sourceTree = "<group>";
 		};
 		9EB779472007FF7C3B97D46D /* Frameworks */ = {
@@ -145,7 +156,7 @@
 				098D467522BD0A4F0033F335 /* Sources */,
 				098D467622BD0A4F0033F335 /* Frameworks */,
 				098D467722BD0A4F0033F335 /* Resources */,
-				5763DB14D30FC64972082872 /* [CP] Embed Pods Frameworks */,
+				5E8A1CF1EAC082130E5101BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +243,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5763DB14D30FC64972082872 /* [CP] Embed Pods Frameworks */ = {
+		5E8A1CF1EAC082130E5101BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
