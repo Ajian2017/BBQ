@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008C8A14C74FE0E8725E153FA4B43AE4 /* BBQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E415CBF12E4FC21B62F0DA0BB99F8A1E /* BBQ-dummy.m */; };
-		03F0BB57723E8E771BA1AB9A6B6774DB /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB1C29B15422C752C19DA7FC5054F9 /* UIView+layout.swift */; };
-		1B45496E98F5A27BF353D825DCF7042F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		1D04D91104E55A6C80B1E49D7FFD7B2E /* BBQTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54540AA6ADBCCBBD8734612A53A6D625 /* BBQTableViewProxy.swift */; };
+		0C3168DC1833D75CBA5A6B423F67FEAF /* UIButton+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5ED75FD3589D1BDD1777D46FA29DFC /* UIButton+BBQ.swift */; };
+		17B92DD85E3B0B20A663B24AC5460B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		2F80FB6ACB0BD79AE35B326B6EB3E320 /* CollectionHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F3BA328DBF6D71E7D238E837FBC94 /* CollectionHeaderFooterView.swift */; };
 		3A450D66F7EF13C49DCAE0B21804748D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		405E64EDCDE87798668F435C84EBD3E0 /* BBQSectionTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146713A3C98EB10EB1D9134E595AA6A /* BBQSectionTableViewProxy.swift */; };
-		495DDDEFF2402E60C312C7F15E034A5C /* UITextField+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED18BD5296217143A2955EEFA757EC65 /* UITextField+BBQ.swift */; };
-		49E2EC81FAC8F263013120E15E2A023D /* UIButton+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497C66474A3A54E160DC7A869BBD937 /* UIButton+BBQ.swift */; };
-		6911BD9302EB5D285580DF41B8C39F80 /* BBQ-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA46332F31F000FAD7BCA8A724BEEE5 /* BBQ-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70337C705060BD21CD03F988440FC722 /* UITextView+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C21B673922F5DC2B4FB7356CA71C27 /* UITextView+BBQ.swift */; };
-		70A52A741EE2C9BD0EBF38D4B0367A81 /* UISwitch+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C34DED611D13C4CF911740ED0D302E /* UISwitch+BBQ.swift */; };
+		4A3604D31918BEF4A2F3A40DB8CFF7B1 /* BBQ-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2888CF0F148552291639FB43865C3B62 /* BBQ-dummy.m */; };
+		648D8AA13C9ECC3124DB0271EAF19DA5 /* NotificationCenter+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF69D5E193193278B317F7FFE08204 /* NotificationCenter+BBQ.swift */; };
+		75CEDAFB70A43F836F5C1418E1876F22 /* UITextView+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D43F62D0AEA1C89499A5D71815A90E6 /* UITextView+BBQ.swift */; };
+		776A4B0989DD4C768A563450AA3AC220 /* BBQSectionTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07FDCD87441D4C6BFBE162BB446C1BF /* BBQSectionTableViewProxy.swift */; };
+		786A1CCC2E8519F0FA6D37DB3230C39E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		7D11EE75B961E04367FEAC15F4105523 /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA96C4E9DCBD18DFE7C5AC431FE88476 /* UIView+layout.swift */; };
+		88A8CFF4B9E00320AAB31A08EC07F744 /* BBQSectionCollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC385647174CF99BA6636A2F6A0E833 /* BBQSectionCollectionViewProxy.swift */; };
 		9A4079E84BFE55F84573EF98CB329DE8 /* Pods-BBQKitDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE36B4239117557C548DB65CD431E13B /* Pods-BBQKitDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEA3450338E4BB90F93BDCCCA04FE9BA /* BBQCollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E70C281768AB85DA0E527F56D7A22 /* BBQCollectionViewProxy.swift */; };
-		C53A923C3634F0AB37FD7C34CE57B5A8 /* NotificationCenter+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1A24FE0B2CD50488B517E78FA02F3 /* NotificationCenter+BBQ.swift */; };
+		9BF0D9BE5E78E37B4B068329CF391251 /* UITextField+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ADF6EAE6050D1D1E207F078EEF087E /* UITextField+BBQ.swift */; };
+		A806702896E2A877E8FCE4E9DEBAFE0B /* BBQ-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBD09141E6A10870AA0AC1BB12880C9 /* BBQ-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCC6F587FAE68D83C27BB0A7B0B4CDBB /* BBQTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B3E301569C5BA8C1423742EB5461D /* BBQTableViewProxy.swift */; };
 		C5ADF9D56B58A12F87B2B3C3A8F76A28 /* Pods-BBQKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 902375722C2FF2BA25A7E3C04F1DD141 /* Pods-BBQKitDemo-dummy.m */; };
-		F65B73F64E04A5D1301D38B8AAE4C702 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E3445275106AE7B703948FF67A5ECB49 /* BBQCollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F4AF0FD785FD7B89FAF51FAB7FB2B /* BBQCollectionViewProxy.swift */; };
+		E545656431CF350174082B5DC0E2F34A /* UISwitch+BBQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D311DB41A9EDD131377F9CB44A4B0A /* UISwitch+BBQ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,43 +39,45 @@
 
 /* Begin PBXFileReference section */
 		03A8BAEA8FA512F92725D45950806A1F /* Pods-BBQKitDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBQKitDemo-Info.plist"; sourceTree = "<group>"; };
-		0497C66474A3A54E160DC7A869BBD937 /* UIButton+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+BBQ.swift"; path = "BBQ/Actions/UIButton+BBQ.swift"; sourceTree = "<group>"; };
-		04AB1C29B15422C752C19DA7FC5054F9 /* UIView+layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+layout.swift"; path = "BBQ/Layout/UIView+layout.swift"; sourceTree = "<group>"; };
-		297A3ABAC93EA355BE389C759EBD9470 /* BBQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBQ-prefix.pch"; sourceTree = "<group>"; };
-		29C2FC84BD524CD75D2EEC98C486D0FD /* BBQ.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BBQ.modulemap; sourceTree = "<group>"; };
+		04B1877CE00C6AE9C60941745671AD37 /* BBQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BBQ.xcconfig; sourceTree = "<group>"; };
+		078B0B48C591376899E76EA897FDB1DE /* BBQ-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BBQ-Info.plist"; sourceTree = "<group>"; };
+		2888CF0F148552291639FB43865C3B62 /* BBQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BBQ-dummy.m"; sourceTree = "<group>"; };
+		2A799204DC98BCA2C0A0037B1B17538E /* BBQ-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBQ-prefix.pch"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		32C23F4D348617E735033BC5772ED31D /* Pods-BBQKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBQKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3D43F62D0AEA1C89499A5D71815A90E6 /* UITextView+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+BBQ.swift"; path = "BBQ/Actions/UITextView+BBQ.swift"; sourceTree = "<group>"; };
 		415C2685D3B750CBC00232B51A1AF6D1 /* Pods-BBQKitDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BBQKitDemo.modulemap"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4CA46332F31F000FAD7BCA8A724BEEE5 /* BBQ-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBQ-umbrella.h"; sourceTree = "<group>"; };
+		49ADF6EAE6050D1D1E207F078EEF087E /* UITextField+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+BBQ.swift"; path = "BBQ/Actions/UITextField+BBQ.swift"; sourceTree = "<group>"; };
 		4D89D32A0A20E186EDC535D4C66751C4 /* Pods-BBQKitDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBQKitDemo-frameworks.sh"; sourceTree = "<group>"; };
 		51E8132B8170A2A0E4462D5B9EDEBD33 /* Pods-BBQKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBQKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		54540AA6ADBCCBBD8734612A53A6D625 /* BBQTableViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQTableViewProxy.swift; path = BBQ/TableProxy/BBQTableViewProxy.swift; sourceTree = "<group>"; };
-		587A9CFDABDAE4C63B40D80F2FA68C7E /* BBQ-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BBQ-Info.plist"; sourceTree = "<group>"; };
+		617F3BA328DBF6D71E7D238E837FBC94 /* CollectionHeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionHeaderFooterView.swift; path = BBQ/CollectionProxy/CollectionHeaderFooterView.swift; sourceTree = "<group>"; };
+		70D311DB41A9EDD131377F9CB44A4B0A /* UISwitch+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+BBQ.swift"; path = "BBQ/Actions/UISwitch+BBQ.swift"; sourceTree = "<group>"; };
+		756F4AF0FD785FD7B89FAF51FAB7FB2B /* BBQCollectionViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQCollectionViewProxy.swift; path = BBQ/CollectionProxy/BBQCollectionViewProxy.swift; sourceTree = "<group>"; };
+		8BF91B50F2043DE4200C6D776CBA159B /* BBQ.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BBQ.modulemap; sourceTree = "<group>"; };
 		902375722C2FF2BA25A7E3C04F1DD141 /* Pods-BBQKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BBQKitDemo-dummy.m"; sourceTree = "<group>"; };
+		9BC385647174CF99BA6636A2F6A0E833 /* BBQSectionCollectionViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQSectionCollectionViewProxy.swift; path = BBQ/CollectionProxy/BBQSectionCollectionViewProxy.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A01E87CD46D83F95831C7AE083277C84 /* Pods_BBQKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBQKitDemo.framework; path = "Pods-BBQKitDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A146713A3C98EB10EB1D9134E595AA6A /* BBQSectionTableViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQSectionTableViewProxy.swift; path = BBQ/TableProxy/BBQSectionTableViewProxy.swift; sourceTree = "<group>"; };
 		A32DAD977765B09248B8A6F7BC50BC5F /* BBQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBQ.framework; path = BBQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5C21B673922F5DC2B4FB7356CA71C27 /* UITextView+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+BBQ.swift"; path = "BBQ/Actions/UITextView+BBQ.swift"; sourceTree = "<group>"; };
 		B12BA4EF3C557B99A8D1BC80C38FFA5A /* Pods-BBQKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBQKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		B1C34DED611D13C4CF911740ED0D302E /* UISwitch+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+BBQ.swift"; path = "BBQ/Actions/UISwitch+BBQ.swift"; sourceTree = "<group>"; };
-		B36E70C281768AB85DA0E527F56D7A22 /* BBQCollectionViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQCollectionViewProxy.swift; path = BBQ/CollectionProxy/BBQCollectionViewProxy.swift; sourceTree = "<group>"; };
-		B6DE6F930D30B8EF59A54476E12B8149 /* BBQ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BBQ.xcconfig; sourceTree = "<group>"; };
+		B62B3E301569C5BA8C1423742EB5461D /* BBQTableViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQTableViewProxy.swift; path = BBQ/TableProxy/BBQTableViewProxy.swift; sourceTree = "<group>"; };
+		BA96C4E9DCBD18DFE7C5AC431FE88476 /* UIView+layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+layout.swift"; path = "BBQ/Layout/UIView+layout.swift"; sourceTree = "<group>"; };
 		BE36B4239117557C548DB65CD431E13B /* Pods-BBQKitDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BBQKitDemo-umbrella.h"; sourceTree = "<group>"; };
 		C48D7BB47CE8FF08699F732D684B0BD6 /* Pods-BBQKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BBQKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4C1A24FE0B2CD50488B517E78FA02F3 /* NotificationCenter+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+BBQ.swift"; path = "BBQ/Actions/NotificationCenter+BBQ.swift"; sourceTree = "<group>"; };
-		E415CBF12E4FC21B62F0DA0BB99F8A1E /* BBQ-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BBQ-dummy.m"; sourceTree = "<group>"; };
-		ED18BD5296217143A2955EEFA757EC65 /* UITextField+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+BBQ.swift"; path = "BBQ/Actions/UITextField+BBQ.swift"; sourceTree = "<group>"; };
+		DA5ED75FD3589D1BDD1777D46FA29DFC /* UIButton+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+BBQ.swift"; path = "BBQ/Actions/UIButton+BBQ.swift"; sourceTree = "<group>"; };
+		E07FDCD87441D4C6BFBE162BB446C1BF /* BBQSectionTableViewProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBQSectionTableViewProxy.swift; path = BBQ/TableProxy/BBQSectionTableViewProxy.swift; sourceTree = "<group>"; };
+		EDCF69D5E193193278B317F7FFE08204 /* NotificationCenter+BBQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+BBQ.swift"; path = "BBQ/Actions/NotificationCenter+BBQ.swift"; sourceTree = "<group>"; };
+		FBBD09141E6A10870AA0AC1BB12880C9 /* BBQ-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBQ-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		564657B8449D04146E95FC07E914FD49 /* Frameworks */ = {
+		A7F030B3046A98E27FF560E82B6084D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F65B73F64E04A5D1301D38B8AAE4C702 /* Foundation.framework in Frameworks */,
-				1B45496E98F5A27BF353D825DCF7042F /* UIKit.framework in Frameworks */,
+				17B92DD85E3B0B20A663B24AC5460B97 /* Foundation.framework in Frameworks */,
+				786A1CCC2E8519F0FA6D37DB3230C39E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,27 +117,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2545EC49B692CDF99DD48CD96B93B533 /* Pods */ = {
+		618CD5260897505F44FF915C5D824937 /* BBQ */ = {
 			isa = PBXGroup;
 			children = (
-				303AD8F209DE8FBE10DA3D0AE992FB66 /* BBQ */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		303AD8F209DE8FBE10DA3D0AE992FB66 /* BBQ */ = {
-			isa = PBXGroup;
-			children = (
-				B36E70C281768AB85DA0E527F56D7A22 /* BBQCollectionViewProxy.swift */,
-				A146713A3C98EB10EB1D9134E595AA6A /* BBQSectionTableViewProxy.swift */,
-				54540AA6ADBCCBBD8734612A53A6D625 /* BBQTableViewProxy.swift */,
-				D4C1A24FE0B2CD50488B517E78FA02F3 /* NotificationCenter+BBQ.swift */,
-				0497C66474A3A54E160DC7A869BBD937 /* UIButton+BBQ.swift */,
-				B1C34DED611D13C4CF911740ED0D302E /* UISwitch+BBQ.swift */,
-				ED18BD5296217143A2955EEFA757EC65 /* UITextField+BBQ.swift */,
-				A5C21B673922F5DC2B4FB7356CA71C27 /* UITextView+BBQ.swift */,
-				04AB1C29B15422C752C19DA7FC5054F9 /* UIView+layout.swift */,
-				7D1E0075D5C3FFB5F9D94DF3DE253E64 /* Support Files */,
+				756F4AF0FD785FD7B89FAF51FAB7FB2B /* BBQCollectionViewProxy.swift */,
+				9BC385647174CF99BA6636A2F6A0E833 /* BBQSectionCollectionViewProxy.swift */,
+				E07FDCD87441D4C6BFBE162BB446C1BF /* BBQSectionTableViewProxy.swift */,
+				B62B3E301569C5BA8C1423742EB5461D /* BBQTableViewProxy.swift */,
+				617F3BA328DBF6D71E7D238E837FBC94 /* CollectionHeaderFooterView.swift */,
+				EDCF69D5E193193278B317F7FFE08204 /* NotificationCenter+BBQ.swift */,
+				DA5ED75FD3589D1BDD1777D46FA29DFC /* UIButton+BBQ.swift */,
+				70D311DB41A9EDD131377F9CB44A4B0A /* UISwitch+BBQ.swift */,
+				49ADF6EAE6050D1D1E207F078EEF087E /* UITextField+BBQ.swift */,
+				3D43F62D0AEA1C89499A5D71815A90E6 /* UITextView+BBQ.swift */,
+				BA96C4E9DCBD18DFE7C5AC431FE88476 /* UIView+layout.swift */,
+				E57A6387A8EC8166CD17254DC6E5C4C7 /* Support Files */,
 			);
 			name = BBQ;
 			path = BBQ;
@@ -147,29 +145,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7D1E0075D5C3FFB5F9D94DF3DE253E64 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				29C2FC84BD524CD75D2EEC98C486D0FD /* BBQ.modulemap */,
-				B6DE6F930D30B8EF59A54476E12B8149 /* BBQ.xcconfig */,
-				E415CBF12E4FC21B62F0DA0BB99F8A1E /* BBQ-dummy.m */,
-				587A9CFDABDAE4C63B40D80F2FA68C7E /* BBQ-Info.plist */,
-				297A3ABAC93EA355BE389C759EBD9470 /* BBQ-prefix.pch */,
-				4CA46332F31F000FAD7BCA8A724BEEE5 /* BBQ-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BBQ";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				2545EC49B692CDF99DD48CD96B93B533 /* Pods */,
+				D0A8D521733F58FF45A60CB09E8D2C85 /* Pods */,
 				F0582AC4A74497D9851025FA2D11AADF /* Products */,
 				6BDC888BC291134C85CA96A5C2646A6F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D0A8D521733F58FF45A60CB09E8D2C85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				618CD5260897505F44FF915C5D824937 /* BBQ */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
@@ -179,6 +171,20 @@
 				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E57A6387A8EC8166CD17254DC6E5C4C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BF91B50F2043DE4200C6D776CBA159B /* BBQ.modulemap */,
+				04B1877CE00C6AE9C60941745671AD37 /* BBQ.xcconfig */,
+				2888CF0F148552291639FB43865C3B62 /* BBQ-dummy.m */,
+				078B0B48C591376899E76EA897FDB1DE /* BBQ-Info.plist */,
+				2A799204DC98BCA2C0A0037B1B17538E /* BBQ-prefix.pch */,
+				FBBD09141E6A10870AA0AC1BB12880C9 /* BBQ-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BBQ";
 			sourceTree = "<group>";
 		};
 		F0582AC4A74497D9851025FA2D11AADF /* Products */ = {
@@ -193,19 +199,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		29CD141EB9AE5C45EAA6346DFD49E287 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A806702896E2A877E8FCE4E9DEBAFE0B /* BBQ-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91615703371801F7181887E8CC37DDDE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9A4079E84BFE55F84573EF98CB329DE8 /* Pods-BBQKitDemo-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3FD4326D15EDEC5804F82C374829ADD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6911BD9302EB5D285580DF41B8C39F80 /* BBQ-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,12 +239,12 @@
 		};
 		255564D2081BAB3278948F8FD40B107A /* BBQ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B343157C4975C0919A5516B75E66A35 /* Build configuration list for PBXNativeTarget "BBQ" */;
+			buildConfigurationList = 4664C21D8C85617246704C6DF7A194CC /* Build configuration list for PBXNativeTarget "BBQ" */;
 			buildPhases = (
-				C3FD4326D15EDEC5804F82C374829ADD /* Headers */,
-				A64DBF79066753E94147FCBE0D720B2F /* Sources */,
-				564657B8449D04146E95FC07E914FD49 /* Frameworks */,
-				913E64B70DE5340A074D40B8846D4139 /* Resources */,
+				29CD141EB9AE5C45EAA6346DFD49E287 /* Headers */,
+				B5E07B570751DCE2DA06E3398063EE30 /* Sources */,
+				A7F030B3046A98E27FF560E82B6084D5 /* Frameworks */,
+				B22790B69E89538F0505EECA6C6624A2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +283,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		913E64B70DE5340A074D40B8846D4139 /* Resources */ = {
+		B22790B69E89538F0505EECA6C6624A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,20 +308,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A64DBF79066753E94147FCBE0D720B2F /* Sources */ = {
+		B5E07B570751DCE2DA06E3398063EE30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008C8A14C74FE0E8725E153FA4B43AE4 /* BBQ-dummy.m in Sources */,
-				AEA3450338E4BB90F93BDCCCA04FE9BA /* BBQCollectionViewProxy.swift in Sources */,
-				405E64EDCDE87798668F435C84EBD3E0 /* BBQSectionTableViewProxy.swift in Sources */,
-				1D04D91104E55A6C80B1E49D7FFD7B2E /* BBQTableViewProxy.swift in Sources */,
-				C53A923C3634F0AB37FD7C34CE57B5A8 /* NotificationCenter+BBQ.swift in Sources */,
-				49E2EC81FAC8F263013120E15E2A023D /* UIButton+BBQ.swift in Sources */,
-				70A52A741EE2C9BD0EBF38D4B0367A81 /* UISwitch+BBQ.swift in Sources */,
-				495DDDEFF2402E60C312C7F15E034A5C /* UITextField+BBQ.swift in Sources */,
-				70337C705060BD21CD03F988440FC722 /* UITextView+BBQ.swift in Sources */,
-				03F0BB57723E8E771BA1AB9A6B6774DB /* UIView+layout.swift in Sources */,
+				4A3604D31918BEF4A2F3A40DB8CFF7B1 /* BBQ-dummy.m in Sources */,
+				E3445275106AE7B703948FF67A5ECB49 /* BBQCollectionViewProxy.swift in Sources */,
+				88A8CFF4B9E00320AAB31A08EC07F744 /* BBQSectionCollectionViewProxy.swift in Sources */,
+				776A4B0989DD4C768A563450AA3AC220 /* BBQSectionTableViewProxy.swift in Sources */,
+				BCC6F587FAE68D83C27BB0A7B0B4CDBB /* BBQTableViewProxy.swift in Sources */,
+				2F80FB6ACB0BD79AE35B326B6EB3E320 /* CollectionHeaderFooterView.swift in Sources */,
+				648D8AA13C9ECC3124DB0271EAF19DA5 /* NotificationCenter+BBQ.swift in Sources */,
+				0C3168DC1833D75CBA5A6B423F67FEAF /* UIButton+BBQ.swift in Sources */,
+				E545656431CF350174082B5DC0E2F34A /* UISwitch+BBQ.swift in Sources */,
+				9BF0D9BE5E78E37B4B068329CF391251 /* UITextField+BBQ.swift in Sources */,
+				75CEDAFB70A43F836F5C1418E1876F22 /* UITextView+BBQ.swift in Sources */,
+				7D11EE75B961E04367FEAC15F4105523 /* UIView+layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +403,41 @@
 			};
 			name = Debug;
 		};
+		36AF0C59D1A131C6100F2CB0028D18EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B1877CE00C6AE9C60941745671AD37 /* BBQ.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BBQ/BBQ-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BBQ/BBQ-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BBQ/BBQ.modulemap";
+				PRODUCT_MODULE_NAME = BBQ;
+				PRODUCT_NAME = BBQ;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -452,42 +495,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		54E3B0374BBB604EE1949AF1A3CF591C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6DE6F930D30B8EF59A54476E12B8149 /* BBQ.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BBQ/BBQ-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BBQ/BBQ-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/BBQ/BBQ.modulemap";
-				PRODUCT_MODULE_NAME = BBQ;
-				PRODUCT_NAME = BBQ;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -568,9 +575,9 @@
 			};
 			name = Release;
 		};
-		E9A285C9CBBAFBA835CC525209745AFE /* Debug */ = {
+		ED0C05132F9198B1C4E6EF64F0539326 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6DE6F930D30B8EF59A54476E12B8149 /* BBQ.xcconfig */;
+			baseConfigurationReference = 04B1877CE00C6AE9C60941745671AD37 /* BBQ.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -598,28 +605,29 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4664C21D8C85617246704C6DF7A194CC /* Build configuration list for PBXNativeTarget "BBQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36AF0C59D1A131C6100F2CB0028D18EE /* Debug */,
+				ED0C05132F9198B1C4E6EF64F0539326 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */,
 				3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6B343157C4975C0919A5516B75E66A35 /* Build configuration list for PBXNativeTarget "BBQ" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E9A285C9CBBAFBA835CC525209745AFE /* Debug */,
-				54E3B0374BBB604EE1949AF1A3CF591C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
