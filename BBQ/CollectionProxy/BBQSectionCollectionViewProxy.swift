@@ -16,13 +16,13 @@ public class BBQSectionCollectionViewProxy: NSObject, UICollectionViewDataSource
     private var headerConfigClosure: ReusableViewConfigClosure?
     private var footerConfigClosure: ReusableViewConfigClosure?
 
-    private var defaultFooterConfigClosure: HeaderFooterViewConfigClosure = {
+    public var defaultFooterConfigClosure: ReusableViewConfigClosure = {
         (indexPath, collectionView) in
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! CollectionHeaderFooterView
         return footer
     }
 
-    private var defaultHeaderConfigClosure: HeaderFooterViewConfigClosure = {
+    public var defaultHeaderConfigClosure: ReusableViewConfigClosure = {
         (indexPath, collectionView) in
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! CollectionHeaderFooterView
         return header

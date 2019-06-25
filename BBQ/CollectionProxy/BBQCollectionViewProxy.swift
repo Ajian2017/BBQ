@@ -10,6 +10,8 @@ import UIKit
 
 public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    public typealias HeaderFooterViewConfigClosure = (IndexPath, UICollectionView) -> UICollectionReusableView
+
     public typealias CollectionCellConfigClosure = (Model, UICollectionViewCell) -> Void
     public typealias CollectionCellClickClosure = (Model) -> Void
 
@@ -29,13 +31,13 @@ public class BBQCollectionViewProxy<Model>: NSObject, UICollectionViewDataSource
     private var headerConfigClosure: HeaderFooterViewConfigClosure?
     private var footerConfigClosure: HeaderFooterViewConfigClosure?
     
-    private var defaultFooterConfigClosure: HeaderFooterViewConfigClosure = {
+    public var defaultFooterConfigClosure: HeaderFooterViewConfigClosure = {
         (indexPath, collectionView) in
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DefaultFooterID, for: indexPath) as! CollectionHeaderFooterView
         return footer
     }
 
-    private var defaultHeaderConfigClosure: HeaderFooterViewConfigClosure = {
+    public var defaultHeaderConfigClosure: HeaderFooterViewConfigClosure = {
         (indexPath, collectionView) in
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DefaultHeaderID, for: indexPath) as! CollectionHeaderFooterView
         return header
