@@ -22,24 +22,23 @@ class ViewController: UIViewController {
         }.addOwener(self)
 
         setupUIContols()
+        view.backgroundColor = .white
 
         let ds = BBQTableViewProxy<Any>(
-            models: [("msg1", "this is first message"), ("msg2", "this is second message")],
+            models: [("CollectionView", "this is CollectionView Demo"), ("msg2", "this is second message")],
             reuseIdentifier: "message"
         ) { model, cell in
             let md = model as! (String, String)
             cell.textLabel?.text = md.0
             cell.detailTextLabel?.text = md.1
         }
-        ds.setCellEditConfigBlock { (row) in
-            return row != 0
-        }
+        ds.setCellEditConfigBlock { (row) in return row != 0 }
         ds.setCellHeightConfig { (_) in return 50 }
         ds.setHeaderHeightConfig { return 22 }
         ds.setHeaderConfig("header") {
             let lb = UILabel()
             lb.text = "header1"
-            lb.backgroundColor = .gray
+            lb.backgroundColor = .lightGray
             return lb
         }
 
@@ -47,13 +46,17 @@ class ViewController: UIViewController {
         ds.setFooterConfig("footer") {
             let lb = UILabel()
             lb.text = "footer1"
-            lb.backgroundColor = .gray
+            lb.backgroundColor = .lightGray
             return lb
         }
 
-        ds.setCellClickBlock({ (model) in
+        ds.setCellClickBlock({ [weak self] (model) in
             let md = model as! (String, String)
             print("you click \(md.0)")
+            if md.0 == "CollectionView" {
+                let cv = CollectionViewController()
+                self?.present(cv, animated: true, completion: nil)
+            }
         })
 
         proxy = ds
@@ -78,7 +81,7 @@ class ViewController: UIViewController {
             print("you click \(md.0)")
         })
 
-        sectionDataProxy = BBQSectionTableViewProxy(dataSources: [ds, ds2])
+        sectionDataProxy = BBQSectionTableViewProxy(tableProxys: [ds, ds2])
 
         table = UITableView(frame: .zero, style: .plain)
         table?.register(UITableViewCell.self, forCellReuseIdentifier: "message")
@@ -91,7 +94,6 @@ class ViewController: UIViewController {
         table?.delegate = sectionDataProxy
         //        table?.dataSource = proxy
         //        table?.delegate = proxy
-
     }
 
     func makeButton(_ title: String) -> UIButton {
@@ -103,7 +105,7 @@ class ViewController: UIViewController {
     }
 
     func setupUIContols() {
-        let bt = makeButton("demo")
+        let bt = makeButton("btn")
         view.addSubview(bt)
         bt.bbq()!.top(150).centerX().size(100, 80)
 
@@ -111,9 +113,9 @@ class ViewController: UIViewController {
             print("you click \(sender)")
             NotificationCenter.default.bbqPost("btnclick", nil, ["msg": bt])
             self?.present(ViewController(), animated: true) {}
-            }.addOwener(self)
+        }.addOwener(self)
 
-        let bt2 = makeButton("demo2")
+        let bt2 = makeButton("btn2")
         view.addSubview(bt2)
         bt2.bbq()!.left(50).top(50).size(100, 80)
         bt2.onTap(.touchUpInside, {[weak self] (bt) in
@@ -137,11 +139,8 @@ class ViewController: UIViewController {
         view.addSubview(tvf)
         tvf.bbq()!.top(30, tf, true).centerX().size(200, 50)
         tvf.backgroundColor = .red
-        tvf.onTextChange { (sender) in print(sender.text) }.addOwener(self)
+        tvf.onTextChange { (sender) in print(sender.text ?? "") }.addOwener(self)
     }
 
-    deinit {
-        print(#function)
-    }
+    deinit { print(#function) }
 }
-
