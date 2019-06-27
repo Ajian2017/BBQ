@@ -1,16 +1,16 @@
 PODS:
-  - BBQ (0.3.9)
+  - BBQ (0.4.0)
 
 DEPENDENCIES:
-  - BBQ (~> 0.3.9)
+  - BBQ (~> 0.4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BBQ
 
 SPEC CHECKSUMS:
-  BBQ: 250c5d873397c369dab28834da89b14f803e8a05
+  BBQ: fbfd07fed90a1348920bfcc9c74b5c3a95dd2165
 
-PODFILE CHECKSUM: 58ca9e4b2d4df9b3d74d95bf3f433cd8c0665ed2
+PODFILE CHECKSUM: fdabe78eed6f7ad9117bfc0afcded1c8f496f5c0
 
 COCOAPODS: 1.7.2
