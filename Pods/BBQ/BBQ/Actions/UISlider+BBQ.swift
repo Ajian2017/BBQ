@@ -17,7 +17,7 @@ public class DisposebleSlider {
         self.sliderChangeBlock = block
     }
 
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleSlider.disposeBag.append(self)

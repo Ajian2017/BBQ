@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09524E0322C0C1E900D9F0BB /* footer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09524E0222C0C1E900D9F0BB /* footer.jpg */; };
+		0961310822C4C9E7000C0607 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961310722C4C9E7000C0607 /* StyleViewController.swift */; };
 		098D467D22BD0A4F0033F335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D467C22BD0A4F0033F335 /* AppDelegate.swift */; };
 		098D467F22BD0A4F0033F335 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D467E22BD0A4F0033F335 /* ViewController.swift */; };
 		098D468222BD0A4F0033F335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D468022BD0A4F0033F335 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		09524E0222C0C1E900D9F0BB /* footer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer.jpg; sourceTree = "<group>"; };
+		0961310722C4C9E7000C0607 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
 		098D467922BD0A4F0033F335 /* BBQKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098D467C22BD0A4F0033F335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098D467E22BD0A4F0033F335 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				09F91B3922C0AC230097421D /* CollectionViewController.swift */,
 				09FF34BA22C1DC4D00DBD478 /* SectionCollectionViewController.swift */,
 				098D467E22BD0A4F0033F335 /* ViewController.swift */,
+				0961310722C4C9E7000C0607 /* StyleViewController.swift */,
 			);
 			name = ViewControllers;
 			path = Viewcontrollers.temp_caseinsensitive_rename.;
@@ -295,6 +298,7 @@
 				09FF34BB22C1DC4D00DBD478 /* SectionCollectionViewController.swift in Sources */,
 				09F91B3E22C0ADE70097421D /* CollectionViewCell.swift in Sources */,
 				09F91B4A22C0B77F0097421D /* CollectionViewHeader.swift in Sources */,
+				0961310822C4C9E7000C0607 /* StyleViewController.swift in Sources */,
 				09FF34C722C1FC5C00DBD478 /* CommonUtil.swift in Sources */,
 				09F91B3A22C0AC230097421D /* CollectionViewController.swift in Sources */,
 				09FF34C922C1FD3300DBD478 /* CollectionViewFooter.swift in Sources */,
