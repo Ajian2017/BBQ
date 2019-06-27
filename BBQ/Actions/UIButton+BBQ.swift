@@ -17,7 +17,7 @@ public class DisposebleBtn {
         self.tabBlock = block
     }
     
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleBtn.disposeBag.append(self)

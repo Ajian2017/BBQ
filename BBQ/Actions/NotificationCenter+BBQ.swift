@@ -24,7 +24,7 @@ public class DisposebleNotification {
         return DisposebleNotification(name, block)
     }
 
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleNotification.disposeBag.append(self)

@@ -18,7 +18,7 @@ public class DisposebleTextField {
         self.textChangeBlock = block
     }
 
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleTextField.disposeBag.append(self)

@@ -19,7 +19,7 @@ public class DisposebleTextView: NSObject,UITextViewDelegate {
         self.textChangeBlock = block
     }
 
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleTextView.disposeBag.append(self)

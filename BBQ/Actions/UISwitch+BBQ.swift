@@ -18,7 +18,7 @@ public class DisposebleSwitch {
         self.switchChangeBlock = block
     }
 
-    public func addOwener(_ obj: NSObject) {
+    public func addOwner(_ obj: NSObject) {
         dispose()
         owner = obj
         DisposebleSwitch.disposeBag.append(self)
