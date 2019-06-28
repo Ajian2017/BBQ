@@ -14,6 +14,7 @@
 		098D468222BD0A4F0033F335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D468022BD0A4F0033F335 /* Main.storyboard */; };
 		098D468422BD0A530033F335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098D468322BD0A530033F335 /* Assets.xcassets */; };
 		098D468722BD0A530033F335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D468522BD0A530033F335 /* LaunchScreen.storyboard */; };
+		09CB469222C5AAE7006EBBA0 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB469122C5AAE7006EBBA0 /* AnimationViewController.swift */; };
 		09F91B3A22C0AC230097421D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F91B3922C0AC230097421D /* CollectionViewController.swift */; };
 		09F91B3E22C0ADE70097421D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F91B3C22C0ADE70097421D /* CollectionViewCell.swift */; };
 		09F91B3F22C0ADE70097421D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09F91B3D22C0ADE70097421D /* CollectionViewCell.xib */; };
@@ -43,6 +44,7 @@
 		098D468322BD0A530033F335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		098D468622BD0A530033F335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098D468822BD0A530033F335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CB469122C5AAE7006EBBA0 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		09F91B3922C0AC230097421D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		09F91B3C22C0ADE70097421D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		09F91B3D22C0ADE70097421D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				09FF34BA22C1DC4D00DBD478 /* SectionCollectionViewController.swift */,
 				098D467E22BD0A4F0033F335 /* ViewController.swift */,
 				0961310722C4C9E7000C0607 /* StyleViewController.swift */,
+				09CB469122C5AAE7006EBBA0 /* AnimationViewController.swift */,
 			);
 			name = ViewControllers;
 			path = Viewcontrollers.temp_caseinsensitive_rename.;
@@ -302,6 +305,7 @@
 				09FF34C722C1FC5C00DBD478 /* CommonUtil.swift in Sources */,
 				09F91B3A22C0AC230097421D /* CollectionViewController.swift in Sources */,
 				09FF34C922C1FD3300DBD478 /* CollectionViewFooter.swift in Sources */,
+				09CB469222C5AAE7006EBBA0 /* AnimationViewController.swift in Sources */,
 				098D467F22BD0A4F0033F335 /* ViewController.swift in Sources */,
 				098D467D22BD0A4F0033F335 /* AppDelegate.swift in Sources */,
 			);
