@@ -28,6 +28,7 @@ public class DisposebleBtn {
     }
 
     @objc func onTapAction(_ bt: UIButton) {
+        guard owner != nil else { return }
         self.tabBlock?(bt)
     }
 

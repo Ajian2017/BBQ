@@ -1,11 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "BBQ"
-  s.version      = "0.4.2"
+  s.version      = "0.4.3"
   s.summary      = "simplify the develop of iOS"
   s.description  = <<-DESC
                     Swift
                     iOS
-                    layout
+                    chain layout
+		    closure base action
+		    animation
+		    simplify tableview collectionview
                    DESC
 
   s.homepage     = "https://github.com/Ajian2017/BBQ"

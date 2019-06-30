@@ -25,6 +25,7 @@ public class DisposebleSwitch {
     }
 
     @objc func onValueChange(_ sender: UISwitch) {
+        guard owner != nil else { return }
         self.switchChangeBlock?(sender)
     }
 

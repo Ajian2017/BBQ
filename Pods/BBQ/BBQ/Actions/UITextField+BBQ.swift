@@ -25,6 +25,7 @@ public class DisposebleTextField {
     }
 
     @objc func onTextChange(_ textfield: UITextField) {
+        guard owner != nil else { return }
         self.textChangeBlock?(textfield)
     }
 

@@ -38,6 +38,7 @@ public class DisposebleTextView: NSObject,UITextViewDelegate {
     ///
     /// - Parameter textView: the textView which text change
     public func textViewDidChange(_ textView: UITextView) {
+        guard owner != nil else { return }
         self.textChangeBlock?(textView)
     }
 }
