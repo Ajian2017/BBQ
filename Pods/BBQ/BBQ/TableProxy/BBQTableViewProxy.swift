@@ -193,7 +193,6 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("click: \(indexPath.row), models: \(models)")
         let model = models[indexPath.row]
         self.cellClickClosure?(model)
         tableView.deselectRow(at: tableView.indexPathForSelectedRow ?? indexPath, animated: true)
