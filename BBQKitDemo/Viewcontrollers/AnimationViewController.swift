@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import BBQ
 
 class AnimationViewController: UIViewController {
+
+    deinit {
+        print(#file)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +39,11 @@ class AnimationViewController: UIViewController {
         }.addOwner(self)
 
         groupBtn.onTap { (_) in
-            let animation1 = demoView.makeRatationX(factor: 1, duration: 10)
-            let animation2 = demoView.makeRatationY(factor: 1, duration: 10)
-            let animation3 = demoView.makeRatationZ(factor: 1, duration: 10)
-            let animation4 = demoView.makeTansition(duration: 10, type: .moveIn)
-            let animation5 = demoView.makeScales(factor: 0.5, duration: 10)
+            let animation1 = demoView.makeRatationX(factor: 1, duration: 4)
+            let animation2 = demoView.makeRatationY(factor: 1, duration: 4)
+            let animation3 = demoView.makeRatationZ(factor: 1, duration: 4)
+            let animation4 = demoView.makeTansition(duration: 4, type: .moveIn)
+            let animation5 = demoView.makeScales(factor: 0.5, duration: 4)
             demoView.groupAnimations([animation1, animation2, animation3, animation4, animation5])
         }.addOwner(self)
 
@@ -50,8 +55,8 @@ class AnimationViewController: UIViewController {
             demoView.addTansition(1).opacity(1)
         }.addOwner(self)
 
-        demoView.onTap { (_) in
-            self.dismiss(animated: true, completion: nil)
+        demoView.onTap { [weak self] (_) in
+            self?.dismiss(animated: true, completion: nil)
         }.addOwner(self)
 
         rotationBtn.onTap { (_) in
@@ -60,5 +65,9 @@ class AnimationViewController: UIViewController {
 
         demoView.bbq()?.centerX().centerY().size(250, 250)
         demoView.backgroundColor = .purple
+
+        DisposebleTimer.schedule(5, true) { (timer) in
+            groupBtn.sendActions(for: .touchUpInside)
+        }.addOwner(self)
     }
 }
