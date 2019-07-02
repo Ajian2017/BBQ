@@ -45,7 +45,7 @@ public class DisposebleTimer {
 }
 
 extension DisposebleTimer {
-    class func schedule(_ interval: TimeInterval, _ repeats: Bool, _ closure: @escaping (Timer) -> Void) -> DisposebleTimer  {
+    public class func schedule(_ interval: TimeInterval, _ repeats: Bool, _ closure: @escaping (Timer) -> Void) -> DisposebleTimer  {
         let dispose = DisposebleTimer.create(closure)
         let timer = Timer(timeInterval: interval, target: dispose, selector: #selector(DisposebleTimer.timerTriggerAction(_:)), userInfo: nil, repeats: repeats)
         RunLoop.main.add(timer, forMode: .common)
