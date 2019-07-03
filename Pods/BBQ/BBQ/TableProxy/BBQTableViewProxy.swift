@@ -21,6 +21,8 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
     public typealias CellClickClosure = (Model) -> Void
 
     var models: [Model] = []
+    private var firstCellExpandable = false
+    private var isExpanding = false
 
     private var reuseIdentifier: String = ""
     private let cellConfigBlock: CellConfigClosure
@@ -76,6 +78,11 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
     }
 
     // MARK: - configs
+
+    /// config whether first row of cell can expand subcells
+    public func setFirstCellExpandable(_ expandable: Bool) {
+        self.firstCellExpandable = expandable
+    }
 
     /// config whether specific row of cell can move
     ///
@@ -141,6 +148,9 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
 
     // MARK: - tableview datasource
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.firstCellExpandable {
+            return self.isExpanding ? models.count : 1
+        }
         return models.count
     }
 
@@ -193,7 +203,25 @@ public class BBQTableViewProxy<Model>: NSObject, UITableViewDataSource, UITableV
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("click: \(indexPath.row), models: \(models)")
+        if self.firstCellExpandable && indexPath.row == 0 {
+            var ips = [IndexPath]()
+            for i in 1..<models.count {
+                ips.append(IndexPath(row: i, section: 0))
+            }
+            if !self.isExpanding {
+                self.isExpanding  = true
+                tableView.beginUpdates()
+                tableView.insertRows(at: ips, with: .automatic)
+                tableView.endUpdates()
+            }
+            else {
+                self.isExpanding  = false
+                tableView.beginUpdates()
+                tableView.deleteRows(at: ips, with: .automatic)
+                tableView.endUpdates()
+            }
+            return
+        }
         let model = models[indexPath.row]
         self.cellClickClosure?(model)
         tableView.deselectRow(at: tableView.indexPathForSelectedRow ?? indexPath, animated: true)
