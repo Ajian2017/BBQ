@@ -9,66 +9,6 @@
 import UIKit
 import BBQ
 
-
-class Solution1072 {
-    func maxEqualRowsAfterFlips(_ matrix: [[Int]]) -> Int {
-
-        let r = matrix.count, c = matrix[0].count
-        var reverse1IdxDic = [Int: Set<Int>]()
-        var reverse0IdxDic = [Int: Set<Int>]()
-        var maxReverse1 = 0,  maxReverse0 = 0
-        for i in 0..<r { for j in 0..<c {
-            if matrix[i][j] == 0 {
-                var set0 = reverse0IdxDic[i, default: Set<Int>()]
-                set0.insert(j)
-                reverse0IdxDic[i] = set0
-            } else {
-                var set1 = reverse1IdxDic[i, default: Set<Int>()]
-                set1.insert(j)
-                reverse1IdxDic[i] = set1
-            }
-            }}
-
-        print(reverse1IdxDic, reverse0IdxDic)
-        for i in 0..<r {
-            let sets1 = reverse1IdxDic[i, default: Set<Int>()]
-            var curSum = 0
-            for a in 0..<r {
-                var valid = true
-                let last = sets1.contains(0) ? abs(matrix[a][0]-1) : matrix[a][0]
-                for j in 1..<c {
-                    let cur = sets1.contains(j) ? abs(matrix[a][j]-1) : matrix[a][j]
-                    if last != cur {
-                        valid = false
-                        break
-                    }
-                }
-                if valid { curSum += 1 }
-            }
-            maxReverse1 = max(maxReverse1, curSum)
-        }
-
-        for i in 0..<r {
-            let sets0 = reverse0IdxDic[i, default: Set<Int>()]
-            var curSum = 0
-            for a in 0..<r {
-                var valid = true
-                let last = sets0.contains(0) ? abs(matrix[a][0]-1) : matrix[a][0]
-                for j in 1..<c {
-                    let cur = sets0.contains(j) ? abs(matrix[a][j]-1) : matrix[a][j]
-                    if last != cur {
-                        valid = false
-                        break
-                    }
-                }
-                if valid { curSum += 1 }
-            }
-            maxReverse0 = max(maxReverse0, curSum)
-        }
-        return max(maxReverse0, maxReverse1)
-    }
-}
-
 class ViewController: UIViewController {
 
     var table: UITableView?
@@ -77,11 +17,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let s1072 = Solution1072()
-        print(s1072.maxEqualRowsAfterFlips([[0,1],[1,0]]))
-
- NotificationCenter.default.registerNotification("btnclick") { (notifi) in
+        NotificationCenter.default.registerNotification("btnclick") { (notifi) in
             print(notifi)
         }.addOwner(self)
 
@@ -89,12 +25,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
 
         let ds = BBQTableViewProxy<Any>(
-            models: ["CollectionView", "CollectionViewSection"],
+            models: ["CollectionView", "CollectionViewSection","default"],
             reuseIdentifier: "message"
         ) { model, cell in
             let md = model as! String
             cell.textLabel?.text = md
         }
+        ds.setFirstCellExpandable(true)
         ds.setCellEditConfigBlock { (row) in return row != 0 }
         ds.setCellHeightConfig { (_) in return 50 }
         ds.setHeaderHeightConfig { return 35 }
