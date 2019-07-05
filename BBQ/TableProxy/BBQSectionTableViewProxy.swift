@@ -11,9 +11,19 @@ import UIKit
 public class BBQSectionTableViewProxy: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     private var tableProxys: [BBQTableViewProxy<Any>]
+    private var firstCellExpandable = false
+    private var isExpandings: [Bool] = []
+
+    // MARK: - configs
+
+    /// config whether first row of cell can expand subcells
+    public func setFirstCellExpandable(_ expandable: Bool) {
+        self.firstCellExpandable = expandable
+    }
 
     public init(tableProxys: [BBQTableViewProxy<Any>]) {
         self.tableProxys = tableProxys
+        isExpandings = [Bool](repeating: false, count: tableProxys.count)
     }
 
     public func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,6 +33,10 @@ public class BBQSectionTableViewProxy: NSObject, UITableViewDataSource, UITableV
     public func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         let proxy = tableProxys[section]
+        if self.firstCellExpandable {
+            let isExpand = isExpandings[section]
+            return isExpand ? proxy.models.count : 1
+        }
         return proxy.tableView(tableView, numberOfRowsInSection: 0)
     }
 
@@ -106,6 +120,26 @@ extension BBQSectionTableViewProxy {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let proxy = tableProxys[indexPath.section]
+        if self.firstCellExpandable && indexPath.row == 0 {
+            let sec = indexPath.section
+            var ips = [IndexPath]()
+            for i in 1..<proxy.models.count {
+                ips.append(IndexPath(row: i, section: sec))
+            }
+            if !isExpandings[sec] {
+                isExpandings[sec] = true
+                tableView.beginUpdates()
+                tableView.insertRows(at: ips, with: .automatic)
+                tableView.endUpdates()
+            }
+            else {
+                isExpandings[sec] = false
+                tableView.beginUpdates()
+                tableView.deleteRows(at: ips, with: .automatic)
+                tableView.endUpdates()
+            }
+            return
+        }
         let indexPath = IndexPath(row: indexPath.row, section: 0)
         proxy.tableView(tableView, didSelectRowAt: indexPath)
         tableView.deselectRow(at: tableView.indexPathForSelectedRow ?? indexPath, animated: true)
